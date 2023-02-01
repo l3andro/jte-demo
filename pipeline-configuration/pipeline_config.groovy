@@ -5,6 +5,9 @@ jte{
 @merge libraries{
     sonarqube
     ansible
+    splunk{
+        afterSteps = [ "static_code_analysis", "unit_test"  ]
+    }
 }
 
 application_environments{
@@ -18,5 +21,5 @@ application_environments{
 }
 
 keywords{
-    requiresApproval = true
+    requiresApproval = false
 }
