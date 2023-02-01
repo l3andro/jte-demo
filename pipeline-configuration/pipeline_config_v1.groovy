@@ -1,6 +1,6 @@
 
 @merge libraries{
-    sonarqube
+    sonarqube_v1
     ansible
     splunk{
         afterSteps = [ "static_code_analysis", "unit_test"  ]
