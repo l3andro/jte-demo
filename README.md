@@ -1,2 +1,1 @@
-# jte-demo
-jenkins template demo
+# jte-the-basics
