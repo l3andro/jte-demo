@@ -1,10 +1,10 @@
 @BeforeStep
-void before(context){
+void before(){
   println "Splunk: running before the ${context.library} library's ${context.step} step" 
 }
 
-@AfterStep({ config.afterSteps ? (context.step in config.afterSteps) : true })
-void after(context){
+@AfterStep({ hookContext.step in config.afterSteps })
+void after(){
   println "Splunk: running after the ${context.library} library's ${context.step} step" 
 }
 
