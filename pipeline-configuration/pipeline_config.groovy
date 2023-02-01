@@ -1,5 +1,5 @@
 libraries{
-    //merge = true
+    merge = true
     sonarqube
     ansible
 }
