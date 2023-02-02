@@ -1,5 +1,3 @@
 library 'libTest@' + pipelineConfig.keywords.pipeline_version
 
-buildTool = 'build_' + pipelineConfig.keywords.build_tool
-
-buildTool()
+build(pipelineConfig.keywords.build_tool)
