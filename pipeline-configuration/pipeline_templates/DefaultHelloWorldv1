@@ -1,3 +1,3 @@
-#library 'libTest@' + pipelineConfig.keywords.pipeline_version
+library 'libTest@' + pipelineConfig.keywords.pipeline_version
 
-#build(pipelineConfig.keywords.build_tool)
+build(pipelineConfig.keywords.build_tool)
