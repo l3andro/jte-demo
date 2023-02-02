@@ -1,7 +1,6 @@
-def lib = library_fetch(lib_name: 'gradle', version/branch: 'v1.0')
-lib.build()
+//library 'libTest@' + pipelineConfig.keywords.library_version
+
+//build(pipelineConfig.keywords.build_tool)
 
 
-//build()
-static_code_analysis()
-deploy_to dev
+build()
