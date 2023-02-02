@@ -1,5 +1,3 @@
-library 'libTest@v1.0'
-
 @merge libraries{
     ansible
     sonarqube
