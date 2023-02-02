@@ -1,5 +1,3 @@
 library 'libTest@v1.0'
 
-//build()
-static_code_analysis()
-deploy_to dev
+build()
