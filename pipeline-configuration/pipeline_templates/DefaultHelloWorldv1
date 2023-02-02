@@ -1,3 +1,5 @@
-library 'libTest@' + pipeline_version
+//library 'libTest@' + pipeline_version
+
+println 'value from pipeline version variable' + pipeline_version
 
 build()
