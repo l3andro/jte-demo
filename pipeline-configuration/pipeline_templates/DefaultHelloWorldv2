@@ -1,4 +1,5 @@
-build()
-static_code_analysis()
-deploy_to dev
-deploy_to prod
+library 'libTest@' + pipelineConfig.keywords.pipeline_version
+
+println 'Jenkins Template: ' + pipelineConfig.jte.pipeline_template
+
+build(pipelineConfig.keywords.build_tool)
