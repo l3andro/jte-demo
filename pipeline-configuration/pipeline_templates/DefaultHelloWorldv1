@@ -1,1 +1,3 @@
+library 'libTest@' + pipeline_version
+
 build()

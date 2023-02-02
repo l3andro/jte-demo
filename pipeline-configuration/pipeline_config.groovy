@@ -1,4 +1,4 @@
-library 'libTest@' + pipeline_version
+
 
 /* @merge libraries{
     ansible
