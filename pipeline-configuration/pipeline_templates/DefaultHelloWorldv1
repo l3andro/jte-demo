@@ -1,5 +1,5 @@
-//library 'libTest@' + pipeline_version
+//library 'libTest@' + 
 
-println 'value from pipeline version variable' + pipeline_version
+println 'value from pipeline version variable' + pipelineConfig.keywords.pipeline_version
 
 build()
