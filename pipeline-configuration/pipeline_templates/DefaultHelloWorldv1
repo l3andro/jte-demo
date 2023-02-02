@@ -1,3 +1,1 @@
-library 'libTest@v1.0'
-
 build()

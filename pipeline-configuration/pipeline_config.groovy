@@ -1,11 +1,12 @@
+library 'libTest@v1.0'
 
-/* @merge libraries{
+@merge libraries{
     ansible
     sonarqube
     splunk{
         afterSteps = [ "static_code_analysis", "unit_test"  ]
     }
-} */
+}
 
 application_environments{
     dev{
