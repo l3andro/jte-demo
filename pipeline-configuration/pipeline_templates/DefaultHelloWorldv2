@@ -1,4 +1,4 @@
-library 'libTest@' + pipelineConfig.keywords.pipeline_version
+library 'libTest@' + pipelineConfig.keywords.library_version
 
 println 'Jenkins Template: ' + pipelineConfig.jte.pipeline_template
 
