@@ -1,5 +1,4 @@
-def lib = library_fetch(lib_name: 'gradle', version/branch: 'v1.0')
-lib.build()
+library 'libTest@v1.0'
 
 //build()
 static_code_analysis()
