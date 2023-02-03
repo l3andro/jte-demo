@@ -1,7 +1,7 @@
 
 @merge libraries{
-    ansible
-    sonarqube
+    //ansible
+    //sonarqube
 }
 
 application_environments{
