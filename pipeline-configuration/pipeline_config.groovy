@@ -1,5 +1,6 @@
 
 @merge libraries{
+    jenkinsLibraryCI
     ansible
     sonarqube
     splunk{
