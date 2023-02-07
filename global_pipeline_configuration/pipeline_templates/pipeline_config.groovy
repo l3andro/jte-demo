@@ -1,6 +1,6 @@
 
 @merge libraries{
-    sonnarqube
+    sonarqube
     splunk{
         afterSteps = [ "static_code_analysis", "unit_test"  ]
     }
