@@ -6,6 +6,6 @@
 //def library = jte.libraries
 //def buildStep = library.build
 //buildStep()
-spec = podSpec(pipelineConfig.libraries)
+def spec = pipelineConfig.libraries
 
 echo "libraries: ${spec}"
