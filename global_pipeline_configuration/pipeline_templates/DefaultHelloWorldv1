@@ -2,7 +2,7 @@
 
 //build(pipelineConfig.keywords.build_tool)
 
-def function="build"
-def library = jte.libraries."maven"
-def stepFile = library."build"
-stepFile()
+
+def library = jte.libraries.maven
+def buildStep = library.build
+buildStep()
