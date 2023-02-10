@@ -8,4 +8,4 @@
 //buildStep()
 def ScmLibraryProvider = org.boozallen.plugins.jte.init.governance.libs.ScmLibraryProvider
 
-ScmLibraryProvider.loadLibrary()
+ScmLibraryProvider.loadLibrary(null,"maven","libraries","libraries")
