@@ -6,6 +6,6 @@
 //def library = jte.libraries
 //def buildStep = library.build
 //buildStep()
-def ScmLibraryProvider = org.boozallen.plugins.jte.init.governance.libs.ScmLibraryProvider
+def PipelineConfigurationProvider = org.boozallen.plugins.jte.init.governance.config.PipelineConfigurationProvider
 
-ScmLibraryProvider.loadLibrary(org.jenkinsci.plugins.workflow.flow.FlowExecutionOwner flowOwner, java.lang.String libName, hudson.FilePath srcDir, hudson.FilePath libDir)
+PipelineConfigurationProvider.getConfig()
