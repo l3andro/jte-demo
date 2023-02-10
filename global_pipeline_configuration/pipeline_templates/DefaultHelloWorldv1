@@ -12,10 +12,11 @@
 import org.jenkinsci.plugins.workflow.flow.FlowExecutionOwner
 import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationObject
 import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationDsl
-
-node {
 String pipelineConfigurationAsString = readFile("./pipeline_config.groovy")
 FlowExecutionOwner owner = CpsThread.current().getExecution().getOwner()
+
+node {
+
 //PipelineConfigurationProvider.getConfig(owner)
 PipelineConfigurationDsl dsl = new PipelineConfigurationDsl(owner)
 dsl.firstConfig = true
