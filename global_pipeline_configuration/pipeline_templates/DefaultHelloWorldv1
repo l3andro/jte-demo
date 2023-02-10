@@ -10,7 +10,7 @@
 
 //echo "libraries: ${spec}"
 import org.jenkinsci.plugins.workflow.flow.FlowExecutionOwner
-import org.boozallen.plugins.jte.init.governance.config.PipelineConfigurationProvider.PipelineConfigurationObject
+import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationObject
 import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationDsl
 
 String pipelineConfigurationAsString = readFile("./pipeline_config.groovy")
