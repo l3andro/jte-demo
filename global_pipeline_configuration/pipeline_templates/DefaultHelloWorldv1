@@ -13,6 +13,7 @@ import org.jenkinsci.plugins.workflow.flow.FlowExecutionOwner
 import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationObject
 import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationDsl
 
+node {
 String pipelineConfigurationAsString = readFile("./pipeline_config.groovy")
 FlowExecutionOwner owner = CpsThread.current().getExecution().getOwner()
 //PipelineConfigurationProvider.getConfig(owner)
@@ -21,3 +22,4 @@ dsl.firstConfig = true
 
 // After this point I cannot do 'sh' or 'writeFile' anymore and it throws: "java.io.NotSerializableException: org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationDsl"
 PipelineConfigurationObject pipelineConfigurationObject = dsl.parse(pipelineConfigurationAsString)
+}
