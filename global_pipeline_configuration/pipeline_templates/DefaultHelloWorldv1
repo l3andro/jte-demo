@@ -3,6 +3,6 @@
 //build(pipelineConfig.keywords.build_tool)
 
 def function="build"
-def library = jte.libraries."libraries"
-def stepFile = library."$libStep"
-stepFile."$function" ()
+def library = jte.libraries."maven"
+def stepFile = library."build"
+stepFile()
