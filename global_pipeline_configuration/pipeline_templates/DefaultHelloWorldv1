@@ -6,6 +6,7 @@
 //def library = jte.libraries
 //def buildStep = library.build
 //buildStep()
+def getOwner = org.jenkinsci.plugins.workflow.flow.FlowExecutionOwner
 def PipelineConfigurationProvider = org.boozallen.plugins.jte.init.governance.config.PipelineConfigurationProvider
 
-PipelineConfigurationProvider.getConfig()
+PipelineConfigurationProvider()
