@@ -9,6 +9,7 @@
 //def spec = pipelineConfig.libraries
 
 //echo "libraries: ${spec}"
+import org.jenkinsci.plugins.workflow.flow.FlowExecutionOwner
 
 String pipelineConfigurationAsString = readFile("./pipeline_config.groovy")
 FlowExecutionOwner owner = CpsThread.current().getExecution().getOwner()
