@@ -2,5 +2,7 @@
 
 //build(pipelineConfig.keywords.build_tool)
 
-
-build()
+def function="build"
+def library = jte.libraries."$libFolder"
+def stepFile = library."$libStep"
+stepFile."$function" ()
