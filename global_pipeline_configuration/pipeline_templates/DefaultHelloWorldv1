@@ -6,6 +6,6 @@
 //def library = jte.libraries
 //def buildStep = library.build
 //buildStep()
-import org.boozallen.plugins.jte.init.governance.libs.ScmLibraryProvider
+def ScmLibraryProvider = org.boozallen.plugins.jte.init.governance.libs.ScmLibraryProvider
 
-loadLibrary()
+ScmLibraryProvider.loadLibrary()
