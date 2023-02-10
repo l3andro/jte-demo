@@ -1,4 +1,8 @@
 
+@merge jte{
+  permissive_initialization = true
+}
+
 @merge libraries{
     splunk{
         afterSteps = [ "static_code_analysis", "unit_test"  ]
