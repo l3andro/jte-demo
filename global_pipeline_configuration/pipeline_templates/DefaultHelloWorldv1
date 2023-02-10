@@ -8,4 +8,4 @@
 //buildStep()
 def ScmLibraryProvider = org.boozallen.plugins.jte.init.governance.libs.ScmLibraryProvider
 
-ScmLibraryProvider.loadLibrary(null,"maven","libraries","libraries")
+ScmLibraryProvider.loadLibrary(org.jenkinsci.plugins.workflow.flow.FlowExecutionOwner flowOwner, java.lang.String libName, hudson.FilePath srcDir, hudson.FilePath libDir)
