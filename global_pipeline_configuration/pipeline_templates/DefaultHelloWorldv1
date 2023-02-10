@@ -10,7 +10,7 @@
 
 //echo "libraries: ${spec}"
 
-import org.boozallen.plugins.jte.init.governance.config.PipelineConfigurationProvider
+//import org.boozallen.plugins.jte.init.governance.config.PipelineConfigurationProvider
 
 String pipelineConfigurationAsString = readFile("./pipeline_config.groovy")
 FlowExecutionOwner owner = CpsThread.current().getExecution().getOwner()
