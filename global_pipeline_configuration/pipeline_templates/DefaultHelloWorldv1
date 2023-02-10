@@ -11,10 +11,11 @@
 //echo "libraries: ${spec}"
 
 //import org.boozallen.plugins.jte.init.governance.config.PipelineConfigurationProvider
+pipeline_config.groovy -> new PipelineConfigurationDsl(flowOwner).parse(pipelineConfigurationAsString);
 
-String pipelineConfigurationAsString = readFile("./pipeline_config.groovy")
-FlowExecutionOwner owner = CpsThread.current().getExecution().getOwner()
-PipelineConfigurationDsl dsl = new PipelineConfigurationDsl(owner)
-// After this point I cannot do 'sh' or 'writeFile' anymore and it throws: "java.io.NotSerializableException: org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationDsl"
-PipelineConfigurationObject pipelineConfigurationObject = dsl.parse(pipelineConfigurationAsString)
+// String pipelineConfigurationAsString = readFile("./pipeline_config.groovy")
+// FlowExecutionOwner owner = CpsThread.current().getExecution().getOwner()
+// PipelineConfigurationDsl dsl = new PipelineConfigurationDsl(owner)
+// // After this point I cannot do 'sh' or 'writeFile' anymore and it throws: "java.io.NotSerializableException: org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationDsl"
+// PipelineConfigurationObject pipelineConfigurationObject = dsl.parse(pipelineConfigurationAsString)
 
