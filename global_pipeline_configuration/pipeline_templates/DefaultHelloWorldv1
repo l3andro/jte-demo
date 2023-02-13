@@ -12,11 +12,13 @@
 
 import org.boozallen.plugins.jte.init.governance.config.ScmPipelineConfigurationProvider
 import org.boozallen.plugins.jte.util.TemplateLogger
+import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationDsl
+import org.boozallen.plugins.jte.util.FileSystemWrapper
 
 FileSystemWrapper fsw = FileSystemWrapper.createFromJob(flowOwner)
 //import org.jenkinsci.plugins.workflow.flow.FlowExecutionOwner
 //import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationObject
-import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationDsl
+
 
 string CONFIG_FILE="teste.groovy"
 configurationPath = ScmPipelineConfigurationProvider.CONFIG_FILE
