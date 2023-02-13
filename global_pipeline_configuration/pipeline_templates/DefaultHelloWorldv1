@@ -16,6 +16,7 @@ import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfiguratio
 import org.boozallen.plugins.jte.util.FileSystemWrapper
 import org.jenkinsci.plugins.workflow.flow.FlowExecutionOwner
 import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationObject
+import org.boozallen.plugins.jte.init.primitives.TemplateBinding
 
 FlowExecutionOwner flowOwner = CpsThread.current().getExecution().getOwner()
 FileSystemWrapper fsw = FileSystemWrapper.createFromJob(flowOwner)
