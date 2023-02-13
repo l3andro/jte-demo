@@ -10,22 +10,42 @@
 
 //echo "libraries: ${spec}"
 
-import org.jenkinsci.plugins.workflow.flow.FlowExecutionOwner
-import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationObject
+import org.boozallen.plugins.jte.init.governance.config.ScmPipelineConfigurationProvider
+import org.boozallen.plugins.jte.util.TemplateLogger
+
+FileSystemWrapper fsw = FileSystemWrapper.createFromJob(flowOwner)
+//import org.jenkinsci.plugins.workflow.flow.FlowExecutionOwner
+//import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationObject
 import org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationDsl
 
-node {
+string CONFIG_FILE="teste.groovy"
+configurationPath = ScmPipelineConfigurationProvider.CONFIG_FILE
+String repoConfigFile = fsw.getFileContents(configurationPath, "Template Configuration File", false)
 
 
-FlowExecutionOwner owner = CpsThread.current().getExecution().getOwner()
-PipelineConfigurationDsl dsl = new PipelineConfigurationDsl(owner)
-dsl.firstConfig = true
+if (repoConfigFile){
+                try{
+                    jobConfig = new PipelineConfigurationDsl(flowOwner).parse(repoConfigFile)
+                } catch(any){
+                    TemplateLogger logger = new TemplateLogger(flowOwner.getListener())
+                    logger.printError("Error parsing ${job.getName()}'s configuration file in SCM.")
+                    throw any
+                }
+            }
 
 
-String pipelineConfigurationAsString = readFile("./pipeline_config.groovy")
-//PipelineConfigurationProvider.getConfig(owner)
+// node {
 
 
-// After this point I cannot do 'sh' or 'writeFile' anymore and it throws: "java.io.NotSerializableException: org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationDsl"
-PipelineConfigurationObject pipelineConfigurationObject = dsl.parse(pipelineConfigurationAsString)
-}
+// FlowExecutionOwner owner = CpsThread.current().getExecution().getOwner()
+// PipelineConfigurationDsl dsl = new PipelineConfigurationDsl(owner)
+// dsl.firstConfig = true
+
+
+// String pipelineConfigurationAsString = readFile("./pipeline_config.groovy")
+// //PipelineConfigurationProvider.getConfig(owner)
+
+
+// // After this point I cannot do 'sh' or 'writeFile' anymore and it throws: "java.io.NotSerializableException: org.boozallen.plugins.jte.init.governance.config.dsl.PipelineConfigurationDsl"
+// PipelineConfigurationObject pipelineConfigurationObject = dsl.parse(pipelineConfigurationAsString)
+// }
