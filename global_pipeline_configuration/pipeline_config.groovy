@@ -8,6 +8,7 @@
     //splunk{
     //    afterSteps = [ "static_code_analysis", "unit_test"  ]
     //}
+    openshiftConfigProject
 }
 
 application_environments{
