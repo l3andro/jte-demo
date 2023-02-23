@@ -1,9 +1,10 @@
 /**
-* Receive the name of a branch and return the specific test args for this branch
+* Receive the name of a branch and set as environments for this branch
 *
 * @param branchName the name of the branch to get configuration
-* @return (Map) returns a map containing the branch configurations comming from pipeline's pipeline_config.groovy
+* 
 */
+
 import hudson.EnvVars;
 import hudson.slaves.EnvironmentVariablesNodeProperty;
 import hudson.slaves.NodeProperty;
@@ -32,7 +33,7 @@ public createGlobalEnvironmentVariables(String key, String value){
 }
 
 void call(String branchName) {
-  def environments = branch_parameters.get(branch_parameters.desenvolvimento, branch_parameters.desenvolvimento)
+  def environments = branch_environments.get(branchName, branch_environments.desenvolvimento)
 
     environments.each {
         key, value -> createGlobalEnvironmentVariables(key,value)
