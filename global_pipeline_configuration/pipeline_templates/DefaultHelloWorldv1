@@ -1,4 +1,5 @@
 
 node{
     get_branch_environments("${env.BRANCH_NAME}")
+    sh 'printenv'
 }
