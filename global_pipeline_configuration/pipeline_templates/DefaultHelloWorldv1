@@ -1,5 +1,6 @@
 
 node{
-    get_branch_environments("${env.BRANCH_NAME}")
+    def teste = get_branch_environments("${env.BRANCH_NAME}")
+    echo "teste: $teste"
 
 }
