@@ -5,9 +5,9 @@ class BranchEnvironments implements Serializable {
         
         def environments = branchEnvironments.get(branch, branchEnvironments.get('desenvolvimento'))
 
-        environments.each {
-            key, value -> def env.key = value
-        }
+        //environments.each {
+       //     key, value -> def env.key = value
+       // }
 
         //return branchEnvironments.get(branch, branchEnvironments.get('desenvolvimento'))
     }
