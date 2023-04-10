@@ -1,3 +1,3 @@
 # jte-the-basics
 
-**Atention**
+> **Note**
